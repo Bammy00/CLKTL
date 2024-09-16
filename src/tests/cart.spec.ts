@@ -13,7 +13,6 @@ test('Add product to cart', async ({ page }) => {
   await homePage.navigate('/');
   await homePage.searchProduct('samsung');
 
-  // Get the results and select the third phone
   const results = await searchPage.getResults();
   const thirdResult = results.nth(2);
   await thirdResult.click();

@@ -8,10 +8,9 @@ test('Search and filter products', async ({ page }) => {
 
   await homePage.navigate('/');
   await homePage.searchProduct('samsung');
-  const results = await searchPage.getResults();
- // expect(results.length()).toBeGreaterThan(0);
+  await searchPage.getResults();
 
   await searchPage.applyFilter('samsung');
-  const filteredResults = await searchPage.getResults();
- // expect(filteredResults.count()).toBeGreaterThan(0);
+  await searchPage.getResults();
+
 });

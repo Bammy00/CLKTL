@@ -2,10 +2,13 @@ import { BasePage } from './base.page';
 
 export class ProductPage extends BasePage {
   async addToCart() {
-    await this.page.click('#a-autoid-1-announce');
-    await this.page.waitForSelector('text=Item Added', { state: 'visible' });
-    await this.page.waitForSelector('text=Item Added', { state: 'hidden' });
-    //await new Promise(resolve => setTimeout(resolve, 5000));
-    await this.page.click('#nav-cart');
+    const addToCartButton = this.page.locator('#a-autoid-1-announce');
+    const itemAddedText = this.page.locator('text=Item Added');
+    const cartButton = this.page.locator('#nav-cart');
+
+    await addToCartButton.click();
+    await itemAddedText.waitFor({ state: 'visible' });
+    await itemAddedText.waitFor({ state: 'hidden' });
+    await cartButton.click();
   }
 }

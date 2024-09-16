@@ -17,9 +17,7 @@ test('Checkout process', async ({ page }) => {
   
   // Get the results and select the third one
   const results = await searchPage.getResults();
-  const thirdResult = results.nth(2); // Index starts at 0, so 2 is the third item
-
-  // Now we can interact with the third result
+  const thirdResult = results.nth(2);
   await thirdResult.click();
 
   await productPage.addToCart();
