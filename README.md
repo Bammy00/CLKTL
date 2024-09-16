@@ -1,6 +1,6 @@
 # Clickatell QA Task
 
-This repository contains automated tests for the **checkout**,**Search**,**Cart** process on the [Amazon](https://www.amazon.com) website. The tests are written using [Playwright](https://playwright.dev/) and follow Page object model design pattern.
+This repository contains automated tests for the **checkout**,**Search**,**Cart** process on the [Amazon](https://www.amazon.com) website. The tests are written using [Playwright](https://playwright.dev/) and Typescript and follow Page object model design pattern.
 
 ## Project Structure 📁
 
